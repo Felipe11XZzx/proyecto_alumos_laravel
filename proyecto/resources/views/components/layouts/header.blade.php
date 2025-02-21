@@ -1,7 +1,13 @@
-{{--
+
 <header class="h-15v bg-header flex items-center justify-between px-4">
     <span>ESTOY EN HEADER</span>
     <div class="flex space-x-2">
+        <input type="checkbox" id="menu-toggler" class="peer-hidden">
+        <br><br>
+        <label for="menu-toggler" class="peer-hidden">
+            <span class="btn btn-primary btn-outline">Menu</span>
+        </label>
+        <div class="hidden absolute peer-checked:flex">
         @guest
         <a class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Boton Responsive</a>
         <a class="btn btn-primary btn bg-buttons" href="#">Iniciar Sesión</a>
@@ -12,9 +18,10 @@
             {{ Auth::user()->name}}
                 <a class="btn btn-primary btn bg-buttons" href="#">Cerrar Sesión</a>
             @endauth
+        </div>
     </div>
 </header>
---}}
+
 
 <header class="h-15v bg-header flex flex-row justify-between
  items-center  p-3
