@@ -14,22 +14,20 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
-            // ESTILOS DE ALTURAS.
             height: {
-                "10v" : "10vh",
-                "15v" : "15vh",
-                "65v" : "65vh"
+                "10v": "10vh",
+                "15v": "15vh",
+                "65v": "65vh",
             },
-            // COLORES DE COMPONENTES.
             colors: {
-                "header": "#CA3C25",
-                "nav": "#FFFBBD",
-                "main": "#E6AA68",
-                "footer": "#7FB069",
-                "buttons" : "#ff9f33"
-            }
+                header: "#D1D5DB",
+                nav: "#4D666D",
+                main: "#FFFFFF",
+                footer: "#A3A8B7",
+            },
         },
     },
 
-    plugins: [forms, require('daisyui')],
+    plugins: [forms, require("daisyui")],
 };
+
