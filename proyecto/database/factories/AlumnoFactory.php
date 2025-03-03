@@ -7,11 +7,17 @@ use Illuminate\Support\Facades\Hash;
 
 class AlumnoFactory extends Factory
 {
+    public function dni():string {
+        $letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        $num=$this->faker->unique()->randomNumber(8);
+        $cif = $num."-".$letras[$num % 23];
+        return $cif;
+    }
     public function definition(): array
     {
         return [
             'nombre' => $this->faker->firstName(),
-            'dni' => fake()->randomNumber(8),
+            'dni' => $this->dni(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => Hash::make('password123'),
         ];

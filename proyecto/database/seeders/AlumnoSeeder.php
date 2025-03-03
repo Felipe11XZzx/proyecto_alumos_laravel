@@ -10,6 +10,6 @@ class AlumnoSeeder extends Seeder
     public function run()
     {
         // Asegúrate de que estás usando el modelo Alumno correctamente
-        Alumno::factory()->count(50)->create();
+        Alumno::factory()->count(20)->create();
     }
 }
